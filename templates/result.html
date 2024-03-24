@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result</title>
+</head>
+<body>
+    <h1>Search Result</h1>
+    {% if not_found %}
+        <p>Tanaman dengan nama '{{ nama_tanaman }}' tidak ditemukan.</p>
+    {% else %}
+        <p>Nama Tanaman: {{ nama_tanaman }}</p>
+        <p>Stok: {{ stok }}</p>
+        <p>Terjual: {{ terjual }}</p>
+    {% endif %}
+</body>
+</html>
