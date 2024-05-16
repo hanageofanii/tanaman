@@ -3,14 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Stock</title>
+    <title>Pencarian Tanaman</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-    <h1>Search Stock</h1>
-    <form action="/search" method="post">
-        <label for="nama_tanaman">Nama Tanaman:</label>
-        <input type="text" id="nama_tanaman" name="nama_tanaman" required>
-        <button type="submit">Search</button>
-    </form>
+    <div class="container">
+        <h1>Cari Tanaman</h1>
+        <form id="plantForm">
+            <label for="plantType">Pilih Jenis Tanaman:</label>
+            <select id="plantType">
+                <option value="tanamanA">Tanaman A</option>
+                <option value="tanamanB">Tanaman B</option>
+                <option value="tanamanC">Tanaman C</option>
+                <!-- Tambahkan jenis tanaman lainnya sesuai kebutuhan -->
+            </select>
+            <button type="button" id="searchButton">Cari</button>
+        </form>
+
+        <div id="plantInfo" class="plant-info">
+            <h2>Informasi Tanaman</h2>
+            <p id="price">Harga: </p>
+            <p id="stock">Stok: </p>
+            <p id="bestSeller">Best Seller: </p>
+            <button type="button" id="addToCartButton">Tambah ke Keranjang</button>
+        </div>
+
+        <div id="cart" class="cart" style="display: none;">
+            <h2>Keranjang Belanja</h2>
+            <ul id="cartItems"></ul>
+            <button type="button" id="checkoutButton">Checkout</button>
+        </div>
+
+        <div id="checkoutForm" style="display: none;">
+            <h2>Metode Pembayaran</h2>
+            <!-- Form metode pembayaran -->
+            <label for="paymentMethod">Pilih Metode Pembayaran:</label>
+            <select id="paymentMethod">
+                <option value="transfer">Transfer Bank</option>
+                <option value="cash">Pembayaran Tunai</option>
+                <!-- Tambahkan metode pembayaran lainnya sesuai kebutuhan -->
+            </select>
+            <button type="button" id="confirmPaymentButton">Konfirmasi Pembayaran</button>
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
 </body>
 </html>

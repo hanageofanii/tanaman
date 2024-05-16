@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Keranjang Belanja</h1>
+        <ul>
+            {% for item in cart_items %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        <a href="/">Kembali ke Halaman Utama</a>
+    </div>
+</body>
+</html>
